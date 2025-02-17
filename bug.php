@@ -1,0 +1,1 @@
+This code suffers from a race condition.  If two requests happen concurrently, they might both read the counter value, increment it independently, and then write the incremented value back, effectively losing one increment. This results in an inaccurate counter.
